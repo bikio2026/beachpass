@@ -325,10 +325,12 @@ app.post('/api/seed/reset', (req, res) => {
 const DIST_DIR = join(__dirname, '..', 'dist')
 if (existsSync(DIST_DIR)) {
   app.use(express.static(DIST_DIR))
-  // SPA fallback: todas las rutas no-API devuelven index.html
-  app.get('*', (req, res) => {
-    if (!req.path.startsWith('/api')) {
+  // SPA fallback: todas las rutas no-API devuelven index.html (Express 5 syntax)
+  app.use((req, res, next) => {
+    if (!req.path.startsWith('/api') && req.method === 'GET') {
       res.sendFile(join(DIST_DIR, 'index.html'))
+    } else {
+      next()
     }
   })
 }
