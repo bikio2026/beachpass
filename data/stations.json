@@ -1,0 +1,1032 @@
+[
+  {
+    "id": "st-bar-001",
+    "name": "Barceloneta Central",
+    "city": "barcelona",
+    "zone": "Barceloneta",
+    "lat": 41.3783,
+    "lng": 2.1893,
+    "address": "Barceloneta, Barcelona",
+    "capacity": {
+      "basic": 15,
+      "premium": 11
+    },
+    "available": {
+      "basic": 8,
+      "premium": 4
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "toilets",
+      "parking"
+    ],
+    "createdAt": "2026-02-26T00:11:18.440Z",
+    "updatedAt": "2026-02-26T00:43:58.039Z"
+  },
+  {
+    "id": "st-bar-002",
+    "name": "Barceloneta Nord",
+    "city": "barcelona",
+    "zone": "Barceloneta",
+    "lat": 41.381,
+    "lng": 2.192,
+    "address": "Barceloneta, Barcelona",
+    "capacity": {
+      "basic": 16,
+      "premium": 11
+    },
+    "available": {
+      "basic": 12,
+      "premium": 8
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "wifi",
+      "lockers",
+      "parking",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.442Z",
+    "updatedAt": "2026-02-26T00:39:49.456Z"
+  },
+  {
+    "id": "st-bar-003",
+    "name": "Barceloneta Sud",
+    "city": "barcelona",
+    "zone": "Barceloneta",
+    "lat": 41.3755,
+    "lng": 2.187,
+    "address": "Barceloneta, Barcelona",
+    "capacity": {
+      "basic": 8,
+      "premium": 9
+    },
+    "available": {
+      "basic": 5,
+      "premium": 6
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "wifi",
+      "toilets",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-004",
+    "name": "Sant Sebastià",
+    "city": "barcelona",
+    "zone": "Sant Sebastià",
+    "lat": 41.3745,
+    "lng": 2.185,
+    "address": "Sant Sebastià, Barcelona",
+    "capacity": {
+      "basic": 12,
+      "premium": 7
+    },
+    "available": {
+      "basic": 8,
+      "premium": 7
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "lockers",
+      "toilets",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-005",
+    "name": "Sant Miquel",
+    "city": "barcelona",
+    "zone": "Sant Miquel",
+    "lat": 41.377,
+    "lng": 2.1885,
+    "address": "Sant Miquel, Barcelona",
+    "capacity": {
+      "basic": 19,
+      "premium": 5
+    },
+    "available": {
+      "basic": 15,
+      "premium": 4
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "lockers"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-006",
+    "name": "Somorrostro",
+    "city": "barcelona",
+    "zone": "Somorrostro",
+    "lat": 41.3835,
+    "lng": 2.195,
+    "address": "Somorrostro, Barcelona",
+    "capacity": {
+      "basic": 19,
+      "premium": 4
+    },
+    "available": {
+      "basic": 13,
+      "premium": 1
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "parking",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T01:04:55.135Z"
+  },
+  {
+    "id": "st-bar-007",
+    "name": "Nova Icària Platja",
+    "city": "barcelona",
+    "zone": "Nova Icària",
+    "lat": 41.387,
+    "lng": 2.199,
+    "address": "Nova Icària, Barcelona",
+    "capacity": {
+      "basic": 8,
+      "premium": 7
+    },
+    "available": {
+      "basic": 7,
+      "premium": 4
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "wifi",
+      "lockers",
+      "toilets",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-008",
+    "name": "Nova Icària Est",
+    "city": "barcelona",
+    "zone": "Nova Icària",
+    "lat": 41.3885,
+    "lng": 2.201,
+    "address": "Nova Icària, Barcelona",
+    "capacity": {
+      "basic": 14,
+      "premium": 9
+    },
+    "available": {
+      "basic": 9,
+      "premium": 5
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "lockers"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-009",
+    "name": "Bogatell Oest",
+    "city": "barcelona",
+    "zone": "Bogatell",
+    "lat": 41.3905,
+    "lng": 2.204,
+    "address": "Bogatell, Barcelona",
+    "capacity": {
+      "basic": 10,
+      "premium": 4
+    },
+    "available": {
+      "basic": 7,
+      "premium": 3
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "toilets",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-010",
+    "name": "Bogatell Central",
+    "city": "barcelona",
+    "zone": "Bogatell",
+    "lat": 41.392,
+    "lng": 2.206,
+    "address": "Bogatell, Barcelona",
+    "capacity": {
+      "basic": 17,
+      "premium": 8
+    },
+    "available": {
+      "basic": 13,
+      "premium": 4
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "toilets"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-011",
+    "name": "Mar Bella Platja",
+    "city": "barcelona",
+    "zone": "Mar Bella",
+    "lat": 41.3945,
+    "lng": 2.2095,
+    "address": "Mar Bella, Barcelona",
+    "capacity": {
+      "basic": 18,
+      "premium": 7
+    },
+    "available": {
+      "basic": 13,
+      "premium": 6
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "wifi",
+      "lockers",
+      "parking",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-012",
+    "name": "Mar Bella Nord",
+    "city": "barcelona",
+    "zone": "Mar Bella",
+    "lat": 41.396,
+    "lng": 2.2115,
+    "address": "Mar Bella, Barcelona",
+    "capacity": {
+      "basic": 11,
+      "premium": 11
+    },
+    "available": {
+      "basic": 7,
+      "premium": 10
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "wifi",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-013",
+    "name": "Nova Mar Bella",
+    "city": "barcelona",
+    "zone": "Nova Mar Bella",
+    "lat": 41.398,
+    "lng": 2.214,
+    "address": "Nova Mar Bella, Barcelona",
+    "capacity": {
+      "basic": 17,
+      "premium": 6
+    },
+    "available": {
+      "basic": 8,
+      "premium": 5
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-014",
+    "name": "Llevant Platja",
+    "city": "barcelona",
+    "zone": "Llevant",
+    "lat": 41.401,
+    "lng": 2.2175,
+    "address": "Llevant, Barcelona",
+    "capacity": {
+      "basic": 17,
+      "premium": 6
+    },
+    "available": {
+      "basic": 15,
+      "premium": 5
+    },
+    "status": "maintenance",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "wifi",
+      "toilets",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-015",
+    "name": "Fòrum",
+    "city": "barcelona",
+    "zone": "Fòrum",
+    "lat": 41.4045,
+    "lng": 2.2215,
+    "address": "Fòrum, Barcelona",
+    "capacity": {
+      "basic": 10,
+      "premium": 10
+    },
+    "available": {
+      "basic": 7,
+      "premium": 4
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "wifi",
+      "toilets",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-016",
+    "name": "W Hotel Platja",
+    "city": "barcelona",
+    "zone": "Barceloneta",
+    "lat": 41.369,
+    "lng": 2.184,
+    "address": "Barceloneta, Barcelona",
+    "capacity": {
+      "basic": 11,
+      "premium": 9
+    },
+    "available": {
+      "basic": 6,
+      "premium": 6
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "wifi",
+      "lockers"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-017",
+    "name": "Passeig Marítim 1",
+    "city": "barcelona",
+    "zone": "Barceloneta",
+    "lat": 41.38,
+    "lng": 2.191,
+    "address": "Barceloneta, Barcelona",
+    "capacity": {
+      "basic": 20,
+      "premium": 8
+    },
+    "available": {
+      "basic": 15,
+      "premium": 6
+    },
+    "status": "maintenance",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "toilets",
+      "parking"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-018",
+    "name": "Espigó del Gas",
+    "city": "barcelona",
+    "zone": "Bogatell",
+    "lat": 41.3935,
+    "lng": 2.2075,
+    "address": "Bogatell, Barcelona",
+    "capacity": {
+      "basic": 11,
+      "premium": 8
+    },
+    "available": {
+      "basic": 10,
+      "premium": 5
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-019",
+    "name": "Base Nàutica",
+    "city": "barcelona",
+    "zone": "Sant Sebastià",
+    "lat": 41.3738,
+    "lng": 2.1835,
+    "address": "Sant Sebastià, Barcelona",
+    "capacity": {
+      "basic": 19,
+      "premium": 6
+    },
+    "available": {
+      "basic": 17,
+      "premium": 4
+    },
+    "status": "maintenance",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "lockers",
+      "toilets",
+      "parking",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-bar-020",
+    "name": "Port Olímpic Platja",
+    "city": "barcelona",
+    "zone": "Nova Icària",
+    "lat": 41.3855,
+    "lng": 2.1975,
+    "address": "Nova Icària, Barcelona",
+    "capacity": {
+      "basic": 9,
+      "premium": 7
+    },
+    "available": {
+      "basic": 4,
+      "premium": 3
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "lockers",
+      "toilets",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-mal-001",
+    "name": "Platja de Palma Centre",
+    "city": "mallorca",
+    "zone": "Platja de Palma",
+    "lat": 39.519,
+    "lng": 2.74,
+    "address": "Platja de Palma, Mallorca",
+    "capacity": {
+      "basic": 13,
+      "premium": 12
+    },
+    "available": {
+      "basic": 9,
+      "premium": 11
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "wifi"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-mal-002",
+    "name": "Platja de Palma Est",
+    "city": "mallorca",
+    "zone": "Platja de Palma",
+    "lat": 39.517,
+    "lng": 2.745,
+    "address": "Platja de Palma, Mallorca",
+    "capacity": {
+      "basic": 20,
+      "premium": 4
+    },
+    "available": {
+      "basic": 16,
+      "premium": 3
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "wifi",
+      "parking"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-mal-003",
+    "name": "Can Pastilla",
+    "city": "mallorca",
+    "zone": "Can Pastilla",
+    "lat": 39.523,
+    "lng": 2.728,
+    "address": "Can Pastilla, Mallorca",
+    "capacity": {
+      "basic": 9,
+      "premium": 12
+    },
+    "available": {
+      "basic": 5,
+      "premium": 7
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "wifi",
+      "toilets"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-mal-004",
+    "name": "S'Arenal Platja",
+    "city": "mallorca",
+    "zone": "S'Arenal",
+    "lat": 39.51,
+    "lng": 2.755,
+    "address": "S'Arenal, Mallorca",
+    "capacity": {
+      "basic": 19,
+      "premium": 11
+    },
+    "available": {
+      "basic": 15,
+      "premium": 5
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "lockers",
+      "toilets"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-mal-005",
+    "name": "Cala Major",
+    "city": "mallorca",
+    "zone": "Cala Major",
+    "lat": 39.558,
+    "lng": 2.608,
+    "address": "Cala Major, Mallorca",
+    "capacity": {
+      "basic": 18,
+      "premium": 4
+    },
+    "available": {
+      "basic": 11,
+      "premium": 3
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-mal-006",
+    "name": "Illetes Nord",
+    "city": "mallorca",
+    "zone": "Illetes",
+    "lat": 39.551,
+    "lng": 2.589,
+    "address": "Illetes, Mallorca",
+    "capacity": {
+      "basic": 18,
+      "premium": 6
+    },
+    "available": {
+      "basic": 14,
+      "premium": 5
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "wifi",
+      "parking",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-mal-007",
+    "name": "Illetes Sud",
+    "city": "mallorca",
+    "zone": "Illetes",
+    "lat": 39.549,
+    "lng": 2.587,
+    "address": "Illetes, Mallorca",
+    "capacity": {
+      "basic": 12,
+      "premium": 12
+    },
+    "available": {
+      "basic": 8,
+      "premium": 10
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "wifi",
+      "lockers"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-mal-008",
+    "name": "Portals Nous",
+    "city": "mallorca",
+    "zone": "Portals Nous",
+    "lat": 39.54,
+    "lng": 2.572,
+    "address": "Portals Nous, Mallorca",
+    "capacity": {
+      "basic": 16,
+      "premium": 11
+    },
+    "available": {
+      "basic": 9,
+      "premium": 7
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "toilets",
+      "parking"
+    ],
+    "createdAt": "2026-02-26T00:11:18.443Z",
+    "updatedAt": "2026-02-26T00:11:18.443Z"
+  },
+  {
+    "id": "st-mal-009",
+    "name": "Magaluf Central",
+    "city": "mallorca",
+    "zone": "Magaluf",
+    "lat": 39.508,
+    "lng": 2.537,
+    "address": "Magaluf, Mallorca",
+    "capacity": {
+      "basic": 14,
+      "premium": 5
+    },
+    "available": {
+      "basic": 7,
+      "premium": 1
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "wifi",
+      "toilets",
+      "parking",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "st-mal-010",
+    "name": "Magaluf Sud",
+    "city": "mallorca",
+    "zone": "Magaluf",
+    "lat": 39.506,
+    "lng": 2.535,
+    "address": "Magaluf, Mallorca",
+    "capacity": {
+      "basic": 15,
+      "premium": 7
+    },
+    "available": {
+      "basic": 9,
+      "premium": 3
+    },
+    "status": "maintenance",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "lockers",
+      "parking",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "st-mal-011",
+    "name": "Santa Ponça",
+    "city": "mallorca",
+    "zone": "Santa Ponça",
+    "lat": 39.507,
+    "lng": 2.478,
+    "address": "Santa Ponça, Mallorca",
+    "capacity": {
+      "basic": 8,
+      "premium": 5
+    },
+    "available": {
+      "basic": 4,
+      "premium": 2
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "wifi"
+    ],
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "st-mal-012",
+    "name": "Peguera Platja",
+    "city": "mallorca",
+    "zone": "Peguera",
+    "lat": 39.528,
+    "lng": 2.452,
+    "address": "Peguera, Mallorca",
+    "capacity": {
+      "basic": 11,
+      "premium": 7
+    },
+    "available": {
+      "basic": 9,
+      "premium": 3
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "wifi",
+      "lockers"
+    ],
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "st-mal-013",
+    "name": "Camp de Mar",
+    "city": "mallorca",
+    "zone": "Camp de Mar",
+    "lat": 39.542,
+    "lng": 2.43,
+    "address": "Camp de Mar, Mallorca",
+    "capacity": {
+      "basic": 13,
+      "premium": 9
+    },
+    "available": {
+      "basic": 9,
+      "premium": 7
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "toilets"
+    ],
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "st-mal-014",
+    "name": "Port de Sóller",
+    "city": "mallorca",
+    "zone": "Port de Sóller",
+    "lat": 39.794,
+    "lng": 2.692,
+    "address": "Port de Sóller, Mallorca",
+    "capacity": {
+      "basic": 12,
+      "premium": 5
+    },
+    "available": {
+      "basic": 9,
+      "premium": 3
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "wifi",
+      "lockers"
+    ],
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "st-mal-015",
+    "name": "Cala Millor Nord",
+    "city": "mallorca",
+    "zone": "Cala Millor",
+    "lat": 39.602,
+    "lng": 3.382,
+    "address": "Cala Millor, Mallorca",
+    "capacity": {
+      "basic": 10,
+      "premium": 9
+    },
+    "available": {
+      "basic": 7,
+      "premium": 7
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "wifi",
+      "lockers",
+      "toilets",
+      "parking"
+    ],
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "st-mal-016",
+    "name": "Cala Millor Centre",
+    "city": "mallorca",
+    "zone": "Cala Millor",
+    "lat": 39.598,
+    "lng": 3.384,
+    "address": "Cala Millor, Mallorca",
+    "capacity": {
+      "basic": 8,
+      "premium": 5
+    },
+    "available": {
+      "basic": 5,
+      "premium": 3
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "wifi",
+      "lockers",
+      "parking",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "st-mal-017",
+    "name": "Alcúdia Platja",
+    "city": "mallorca",
+    "zone": "Alcúdia",
+    "lat": 39.843,
+    "lng": 3.122,
+    "address": "Alcúdia, Mallorca",
+    "capacity": {
+      "basic": 18,
+      "premium": 10
+    },
+    "available": {
+      "basic": 13,
+      "premium": 5
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "toilets",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "st-mal-018",
+    "name": "Alcúdia Port",
+    "city": "mallorca",
+    "zone": "Alcúdia",
+    "lat": 39.838,
+    "lng": 3.13,
+    "address": "Alcúdia, Mallorca",
+    "capacity": {
+      "basic": 20,
+      "premium": 8
+    },
+    "available": {
+      "basic": 13,
+      "premium": 5
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "showers",
+      "wifi"
+    ],
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "st-mal-019",
+    "name": "Cala d'Or",
+    "city": "mallorca",
+    "zone": "Cala d'Or",
+    "lat": 39.372,
+    "lng": 3.233,
+    "address": "Cala d'Or, Mallorca",
+    "capacity": {
+      "basic": 8,
+      "premium": 6
+    },
+    "available": {
+      "basic": 6,
+      "premium": 3
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "lockers",
+      "lifeguard"
+    ],
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "st-mal-020",
+    "name": "Porto Cristo",
+    "city": "mallorca",
+    "zone": "Porto Cristo",
+    "lat": 39.542,
+    "lng": 3.331,
+    "address": "Porto Cristo, Mallorca",
+    "capacity": {
+      "basic": 13,
+      "premium": 6
+    },
+    "available": {
+      "basic": 10,
+      "premium": 3
+    },
+    "status": "active",
+    "openHours": "08:00–20:00",
+    "amenities": [
+      "wifi",
+      "toilets",
+      "parking"
+    ],
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:11:18.444Z"
+  }
+]

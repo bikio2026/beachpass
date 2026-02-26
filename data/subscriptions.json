@@ -1,0 +1,63 @@
+[
+  {
+    "id": "sub-001",
+    "userId": "usr-001",
+    "tier": "premium",
+    "period": "monthly",
+    "price": 100,
+    "status": "active",
+    "city": "barcelona",
+    "startDate": "2026-02-11T00:11:18.444Z",
+    "endDate": "2026-03-13T00:11:18.444Z",
+    "createdAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "sub-002",
+    "userId": "usr-002",
+    "tier": "basic",
+    "period": "weekly",
+    "price": 25,
+    "status": "active",
+    "city": "barcelona",
+    "startDate": "2026-02-23T00:11:18.444Z",
+    "endDate": "2026-03-02T00:11:18.444Z",
+    "createdAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "sub-003",
+    "userId": "usr-004",
+    "tier": "premium",
+    "period": "annual",
+    "price": 300,
+    "status": "active",
+    "city": "mallorca",
+    "startDate": "2025-12-28T00:11:18.444Z",
+    "endDate": "2026-12-28T00:11:18.444Z",
+    "createdAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "sub-004",
+    "userId": "usr-003",
+    "tier": "basic",
+    "period": "daily",
+    "price": 5,
+    "status": "expired",
+    "city": "barcelona",
+    "startDate": "2026-02-16T00:11:18.444Z",
+    "endDate": "2026-02-17T00:11:18.444Z",
+    "createdAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "sub-8594ibx8",
+    "userId": "usr-005",
+    "tier": "basic",
+    "period": "weekly",
+    "price": 25,
+    "status": "active",
+    "city": "barcelona",
+    "startDate": "2026-02-26T00:40:55.377Z",
+    "endDate": "2026-03-05T00:40:55.377Z",
+    "createdAt": "2026-02-26T00:40:55.377Z",
+    "updatedAt": "2026-02-26T00:40:55.377Z"
+  }
+]

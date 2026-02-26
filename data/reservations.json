@@ -1,0 +1,12 @@
+[
+  {
+    "id": "rsv-nztuyma3",
+    "userId": "usr-005",
+    "stationId": "st-bar-006",
+    "type": "basic",
+    "equipmentId": "eq-l8mcgm0w",
+    "status": "cancelled",
+    "createdAt": "2026-02-26T01:04:38.502Z",
+    "expiresAt": "2026-02-26T01:34:38.502Z"
+  }
+]

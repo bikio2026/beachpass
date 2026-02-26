@@ -1,0 +1,28 @@
+[
+  {
+    "id": "rental-m91qg7r4",
+    "userId": "usr-005",
+    "subscriptionId": "sub-001",
+    "stationId": "st-bar-001",
+    "equipmentId": "eq-9z5q349h",
+    "type": "basic",
+    "status": "completed",
+    "pickupTime": "2026-02-26T00:39:49.406Z",
+    "returnTime": "2026-02-26T00:39:49.436Z",
+    "returnStationId": "st-bar-002",
+    "qrToken": "qr-w8bn61e8"
+  },
+  {
+    "id": "rental-98awh4d9",
+    "userId": "usr-005",
+    "subscriptionId": "sub-8594ibx8",
+    "stationId": "st-bar-001",
+    "equipmentId": "eq-pxy9nphm",
+    "type": "basic",
+    "status": "active",
+    "pickupTime": "2026-02-26T00:43:58.029Z",
+    "returnTime": null,
+    "returnStationId": null,
+    "qrToken": "qr-sfxpswed"
+  }
+]

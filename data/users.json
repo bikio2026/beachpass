@@ -1,0 +1,48 @@
+[
+  {
+    "id": "usr-001",
+    "name": "María García",
+    "email": "maria@demo.com",
+    "phone": "+34 612 345 678",
+    "pin": "1234",
+    "activeSubscriptionId": "sub-001",
+    "createdAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "usr-002",
+    "name": "Joan Martí",
+    "email": "joan@demo.com",
+    "phone": "+34 623 456 789",
+    "pin": "5678",
+    "activeSubscriptionId": "sub-002",
+    "createdAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "usr-003",
+    "name": "Laura Soler",
+    "email": "laura@demo.com",
+    "phone": "+34 634 567 890",
+    "pin": "9012",
+    "activeSubscriptionId": null,
+    "createdAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "usr-004",
+    "name": "Alex Fernández",
+    "email": "alex@demo.com",
+    "phone": "+34 645 678 901",
+    "pin": "3456",
+    "activeSubscriptionId": "sub-003",
+    "createdAt": "2026-02-26T00:11:18.444Z"
+  },
+  {
+    "id": "usr-005",
+    "name": "Demo User",
+    "email": "demo@beachpass.com",
+    "phone": "+34 600 000 000",
+    "pin": "0000",
+    "activeSubscriptionId": "sub-8594ibx8",
+    "createdAt": "2026-02-26T00:11:18.444Z",
+    "updatedAt": "2026-02-26T00:40:55.377Z"
+  }
+]
