@@ -1,10 +1,10 @@
 const VARIANTS = {
-  default:  'bg-color-bg-card-hover text-color-text-muted',
-  accent:   'bg-color-accent-soft text-color-accent',
-  success:  'bg-color-success-soft text-color-success',
-  warning:  'bg-color-warning-soft text-color-warning',
-  error:    'bg-color-error-soft text-color-error',
-  sun:      'bg-color-sun-soft text-color-sun',
+  default:  'bg-bg-card-hover text-text-muted',
+  accent:   'bg-accent-soft text-accent',
+  success:  'bg-success-soft text-success',
+  warning:  'bg-warning-soft text-warning',
+  error:    'bg-error-soft text-error',
+  sun:      'bg-sun-soft text-sun',
 }
 
 export function Badge({ children, variant = 'default', className = '' }) {

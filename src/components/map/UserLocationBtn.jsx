@@ -43,7 +43,7 @@ export function UserLocationBtn({ mapRef }) {
     >
       <Navigation
         size={18}
-        className={`text-color-accent transition-transform ${locating ? 'animate-pulse' : ''}`}
+        className={`text-accent transition-transform ${locating ? 'animate-pulse' : ''}`}
       />
     </button>
   )

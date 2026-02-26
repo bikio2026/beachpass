@@ -12,18 +12,18 @@ import { TIERS } from '../../lib/constants'
 const TYPE_CONFIG = {
   basic: {
     icon: Umbrella,
-    colorClass: 'text-color-tier-basic',
-    bgClass: 'bg-color-accent-soft/50',
-    borderActive: 'border-color-accent',
-    btnClass: 'bg-color-accent hover:bg-color-accent-hover',
+    colorClass: 'text-tier-basic',
+    bgClass: 'bg-accent-soft/50',
+    borderActive: 'border-accent',
+    btnClass: 'bg-accent hover:bg-accent-hover',
     shadow: '0 4px 12px rgba(8, 145, 178, 0.3)',
   },
   premium: {
     icon: Crown,
-    colorClass: 'text-color-tier-premium',
-    bgClass: 'bg-color-sun-soft/50',
-    borderActive: 'border-color-sun',
-    btnClass: 'bg-color-sun hover:bg-color-sun-hover',
+    colorClass: 'text-tier-premium',
+    bgClass: 'bg-sun-soft/50',
+    borderActive: 'border-sun',
+    btnClass: 'bg-sun hover:bg-sun-hover',
     shadow: '0 4px 12px rgba(245, 158, 11, 0.3)',
   },
 }
@@ -58,13 +58,13 @@ export function RentalFlow({ stationId, stationName, onClose }) {
     return (
       <DialogShell title="Alquilar equipamiento" onClose={onClose}>
         <div className="flex flex-col items-center py-6 text-center">
-          <div className="w-14 h-14 rounded-2xl bg-color-error-soft flex items-center justify-center mb-4">
-            <AlertCircle size={26} className="text-color-error" />
+          <div className="w-14 h-14 rounded-2xl bg-error-soft flex items-center justify-center mb-4">
+            <AlertCircle size={26} className="text-error" />
           </div>
-          <h3 className="font-display text-base font-semibold text-color-text mb-1">
+          <h3 className="font-display text-base font-semibold text-text mb-1">
             Inicio de sesion requerido
           </h3>
-          <p className="text-sm text-color-text-muted max-w-xs">
+          <p className="text-sm text-text-muted max-w-xs">
             Inicia sesion para poder retirar equipamiento
           </p>
         </div>
@@ -77,18 +77,18 @@ export function RentalFlow({ stationId, stationName, onClose }) {
     return (
       <DialogShell title="Alquilar equipamiento" onClose={onClose}>
         <div className="flex flex-col items-center py-6 text-center">
-          <div className="w-14 h-14 rounded-2xl bg-color-warning-soft flex items-center justify-center mb-4">
-            <AlertCircle size={26} className="text-color-warning" />
+          <div className="w-14 h-14 rounded-2xl bg-warning-soft flex items-center justify-center mb-4">
+            <AlertCircle size={26} className="text-warning" />
           </div>
-          <h3 className="font-display text-base font-semibold text-color-text mb-1">
+          <h3 className="font-display text-base font-semibold text-text mb-1">
             Necesitas una suscripcion
           </h3>
-          <p className="text-sm text-color-text-muted max-w-xs mb-4">
+          <p className="text-sm text-text-muted max-w-xs mb-4">
             Para retirar equipamiento necesitas un plan activo. Elegí tu plan desde la seccion Planes.
           </p>
           <button
             onClick={onClose}
-            className="px-5 py-2.5 rounded-xl bg-color-accent text-white font-semibold text-sm hover:bg-color-accent-hover transition-colors"
+            className="px-5 py-2.5 rounded-xl bg-accent text-white font-semibold text-sm hover:bg-accent-hover transition-colors"
           >
             Entendido
           </button>
@@ -120,7 +120,7 @@ export function RentalFlow({ stationId, stationName, onClose }) {
     <DialogShell title={`Retirar en ${stationName}`} onClose={onClose}>
       <div className="space-y-5">
         {/* Instruccion */}
-        <p className="text-sm text-color-text-muted">
+        <p className="text-sm text-text-muted">
           Elegí el tipo de equipamiento que queres retirar:
         </p>
 
@@ -142,8 +142,8 @@ export function RentalFlow({ stationId, stationName, onClose }) {
                   isSelected
                     ? `${cfg.bgClass} ${cfg.borderActive}`
                     : isDisabled
-                    ? 'bg-color-bg-card-hover border-color-border opacity-50 cursor-not-allowed'
-                    : 'bg-color-bg-card border-color-border hover:border-color-border-hover'
+                    ? 'bg-bg-card-hover border-border opacity-50 cursor-not-allowed'
+                    : 'bg-bg-card border-border hover:border-border-hover'
                 }`}
               >
                 <div className="flex items-center gap-3">
@@ -152,16 +152,16 @@ export function RentalFlow({ stationId, stationName, onClose }) {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between mb-0.5">
-                      <span className="font-display text-sm font-bold text-color-text">
+                      <span className="font-display text-sm font-bold text-text">
                         {tier.name}
                       </span>
                       <span className={`text-xs font-medium ${
-                        available > 0 ? 'text-color-success' : 'text-color-error'
+                        available > 0 ? 'text-success' : 'text-error'
                       }`}>
                         {available > 0 ? `${available} disponibles` : 'Sin stock'}
                       </span>
                     </div>
-                    <p className="text-xs text-color-text-muted">{tier.description}</p>
+                    <p className="text-xs text-text-muted">{tier.description}</p>
                   </div>
                 </div>
               </button>
@@ -170,7 +170,7 @@ export function RentalFlow({ stationId, stationName, onClose }) {
         </div>
 
         {/* Info de suscripcion activa */}
-        <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-color-success-soft/60 text-xs text-color-success">
+        <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-success-soft/60 text-xs text-success">
           <span className="font-medium">
             Plan activo: {TIERS[activeSubscription.tier]?.name}
           </span>
@@ -181,7 +181,7 @@ export function RentalFlow({ stationId, stationName, onClose }) {
           onClick={handlePickup}
           disabled={!selectedType || loading}
           className={`w-full py-3.5 rounded-xl text-white font-semibold text-sm transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed ${
-            selectedType ? TYPE_CONFIG[selectedType].btnClass : 'bg-color-accent hover:bg-color-accent-hover'
+            selectedType ? TYPE_CONFIG[selectedType].btnClass : 'bg-accent hover:bg-accent-hover'
           }`}
           style={{ boxShadow: selectedType ? TYPE_CONFIG[selectedType].shadow : undefined }}
         >

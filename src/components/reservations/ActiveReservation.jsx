@@ -15,15 +15,15 @@ const TYPE_ICON = {
 
 const TYPE_COLORS = {
   basic: {
-    bg: 'bg-color-accent-soft/50',
-    text: 'text-color-tier-basic',
-    btn: 'bg-color-accent hover:bg-color-accent-hover',
+    bg: 'bg-accent-soft/50',
+    text: 'text-tier-basic',
+    btn: 'bg-accent hover:bg-accent-hover',
     shadow: '0 4px 12px rgba(8, 145, 178, 0.3)',
   },
   premium: {
-    bg: 'bg-color-sun-soft/50',
-    text: 'text-color-tier-premium',
-    btn: 'bg-color-sun hover:bg-color-sun-hover',
+    bg: 'bg-sun-soft/50',
+    text: 'text-tier-premium',
+    btn: 'bg-sun hover:bg-sun-hover',
     shadow: '0 4px 12px rgba(245, 158, 11, 0.3)',
   },
 }
@@ -85,21 +85,21 @@ export function ActiveReservation() {
 
   // Colores de urgencia para el countdown
   const urgencyStyles = {
-    normal: 'text-color-accent',
-    warning: 'text-color-warning',
-    critical: 'text-color-error animate-pulse',
+    normal: 'text-accent',
+    warning: 'text-warning',
+    critical: 'text-error animate-pulse',
   }
 
   const urgencyBorder = {
-    normal: 'border-color-border',
-    warning: 'border-color-warning/50',
-    critical: 'border-color-error/50',
+    normal: 'border-border',
+    warning: 'border-warning/50',
+    critical: 'border-error/50',
   }
 
   const urgencyBg = {
     normal: '',
-    warning: 'bg-color-warning-soft/20',
-    critical: 'bg-color-error-soft/20',
+    warning: 'bg-warning-soft/20',
+    critical: 'bg-error-soft/20',
   }
 
   const handleClaim = async () => {
@@ -133,11 +133,11 @@ export function ActiveReservation() {
   return (
     <div className="absolute bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 z-[1500] w-[calc(100%-2rem)] max-w-sm animate-fade-in-up">
       <div
-        className={`rounded-2xl border ${urgencyBorder[countdown.urgency]} bg-color-bg-card shadow-xl overflow-hidden ${urgencyBg[countdown.urgency]}`}
+        className={`rounded-2xl border ${urgencyBorder[countdown.urgency]} bg-bg-card shadow-xl overflow-hidden ${urgencyBg[countdown.urgency]}`}
         style={{ boxShadow: '0 12px 40px rgba(0,0,0,0.12)' }}
       >
         {/* Barra de progreso superior */}
-        <div className="h-1 bg-color-bg-card-hover relative overflow-hidden">
+        <div className="h-1 bg-bg-card-hover relative overflow-hidden">
           <div
             className="absolute inset-y-0 left-0 transition-all duration-1000 ease-linear"
             style={{
@@ -159,10 +159,10 @@ export function ActiveReservation() {
                 <Icon size={18} className={colors.text} />
               </div>
               <div>
-                <div className="font-display text-sm font-bold text-color-text">
+                <div className="font-display text-sm font-bold text-text">
                   Reserva {tierName}
                 </div>
-                <div className="flex items-center gap-1 text-xs text-color-text-muted">
+                <div className="flex items-center gap-1 text-xs text-text-muted">
                   <MapPin size={11} />
                   {stationName}
                 </div>
@@ -178,13 +178,13 @@ export function ActiveReservation() {
 
           {/* Alerta de urgencia */}
           {countdown.urgency === 'warning' && (
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-color-warning-soft/60 text-xs text-color-warning">
+            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-warning-soft/60 text-xs text-warning">
               <AlertTriangle size={13} className="shrink-0" />
               <span>Quedan menos de 5 minutos. Acercate a la estación.</span>
             </div>
           )}
           {countdown.urgency === 'critical' && (
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-color-error-soft/60 text-xs text-color-error">
+            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-error-soft/60 text-xs text-error">
               <AlertTriangle size={13} className="shrink-0" />
               <span>Tu reserva está por expirar.</span>
             </div>
@@ -209,7 +209,7 @@ export function ActiveReservation() {
             <button
               onClick={handleCancel}
               disabled={loading}
-              className="px-4 py-2.5 rounded-xl border border-color-border text-color-text-muted font-semibold text-sm hover:bg-color-bg-card-hover hover:text-color-text transition-all flex items-center justify-center gap-1.5 disabled:opacity-50"
+              className="px-4 py-2.5 rounded-xl border border-border text-text-muted font-semibold text-sm hover:bg-bg-card-hover hover:text-text transition-all flex items-center justify-center gap-1.5 disabled:opacity-50"
             >
               {action === 'cancel' ? (
                 <Loader2 size={15} className="animate-spin" />

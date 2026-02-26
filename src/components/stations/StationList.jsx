@@ -34,21 +34,21 @@ export function StationList() {
       <div className="flex-1 overflow-auto p-6 pb-20 md:pb-6">
         {/* Search */}
         <div className="relative mb-5">
-          <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-color-text-dim" />
+          <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-dim" />
           <input
             type="text"
             placeholder="Buscar estación o zona..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 bg-color-bg-input border border-color-border rounded-xl text-sm text-color-text placeholder:text-color-text-dim focus:outline-none focus:border-color-accent transition-colors"
+            className="w-full pl-10 pr-4 py-2.5 bg-bg-input border border-border rounded-xl text-sm text-text placeholder:text-text-dim focus:outline-none focus:border-accent transition-colors"
           />
         </div>
 
         {/* Summary */}
         <div className="flex items-center gap-2 mb-4">
-          <MapPin size={14} className="text-color-accent" />
-          <span className="text-sm text-color-text-muted">
-            <span className="font-semibold text-color-text">{filtered.length}</span> estaciones en{' '}
+          <MapPin size={14} className="text-accent" />
+          <span className="text-sm text-text-muted">
+            <span className="font-semibold text-text">{filtered.length}</span> estaciones en{' '}
             {selectedCity === 'barcelona' ? 'Barcelona' : 'Mallorca'}
           </span>
         </div>

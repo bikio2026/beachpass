@@ -71,14 +71,14 @@ export function MapView() {
 
       {/* Station count pill — above bottom nav on mobile */}
       <div
-        className="absolute bottom-16 md:bottom-6 left-4 z-[1000] px-3.5 py-2 rounded-xl text-xs font-semibold text-color-text"
+        className="absolute bottom-16 md:bottom-6 left-4 z-[1000] px-3.5 py-2 rounded-xl text-xs font-semibold text-text"
         style={{
           background: 'rgba(255,255,255,0.9)',
           backdropFilter: 'blur(12px)',
           boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
         }}
       >
-        <span className="text-color-accent">{activeStations.length}</span>{' '}
+        <span className="text-accent">{activeStations.length}</span>{' '}
         estaciones
       </div>
 

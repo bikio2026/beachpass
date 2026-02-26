@@ -24,7 +24,7 @@ export function AdminPanel() {
       <Header />
 
       {/* Tab bar */}
-      <div className="px-4 pt-3 pb-0 bg-color-bg-card border-b border-color-border">
+      <div className="px-4 pt-3 pb-0 bg-bg-card border-b border-border">
         <div className="flex gap-1 overflow-x-auto scrollbar-hide">
           {TABS.map(tab => {
             const Icon = tab.icon
@@ -35,14 +35,14 @@ export function AdminPanel() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-t-lg transition-all whitespace-nowrap relative ${
                   isActive
-                    ? 'text-color-accent bg-color-bg'
-                    : 'text-color-text-muted hover:text-color-text hover:bg-color-bg-card-hover'
+                    ? 'text-accent bg-bg'
+                    : 'text-text-muted hover:text-text hover:bg-bg-card-hover'
                 }`}
               >
                 <Icon size={14} />
                 {tab.label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-color-accent rounded-t-full" />
+                  <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-accent rounded-t-full" />
                 )}
               </button>
             )
@@ -129,7 +129,7 @@ function RentalsAdmin() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20">
-        <div className="w-8 h-8 border-3 border-color-accent border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-3 border-accent border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
@@ -146,17 +146,17 @@ function RentalsAdmin() {
     <div className="space-y-4">
       {/* Filters */}
       <div className="flex items-center gap-2 flex-wrap">
-        <Filter size={14} className="text-color-text-muted" />
+        <Filter size={14} className="text-text-muted" />
 
-        <div className="flex gap-1 p-0.5 bg-color-bg-input rounded-lg">
+        <div className="flex gap-1 p-0.5 bg-bg-input rounded-lg">
           {[{ v: 'all', l: 'Todos' }, { v: 'active', l: 'Activos' }, { v: 'completed', l: 'Completados' }].map(opt => (
             <button
               key={opt.v}
               onClick={() => setFilterStatus(opt.v)}
               className={`px-2.5 py-1 text-[11px] font-medium rounded-md transition-all ${
                 filterStatus === opt.v
-                  ? 'bg-color-accent text-white'
-                  : 'text-color-text-muted hover:text-color-text'
+                  ? 'bg-accent text-white'
+                  : 'text-text-muted hover:text-text'
               }`}
             >
               {opt.l}
@@ -164,15 +164,15 @@ function RentalsAdmin() {
           ))}
         </div>
 
-        <div className="flex gap-1 p-0.5 bg-color-bg-input rounded-lg">
+        <div className="flex gap-1 p-0.5 bg-bg-input rounded-lg">
           {[{ v: 'all', l: 'Ambos' }, { v: 'basic', l: 'Basic' }, { v: 'premium', l: 'Premium' }].map(opt => (
             <button
               key={opt.v}
               onClick={() => setFilterType(opt.v)}
               className={`px-2.5 py-1 text-[11px] font-medium rounded-md transition-all ${
                 filterType === opt.v
-                  ? 'bg-color-accent text-white'
-                  : 'text-color-text-muted hover:text-color-text'
+                  ? 'bg-accent text-white'
+                  : 'text-text-muted hover:text-text'
               }`}
             >
               {opt.l}
@@ -180,14 +180,14 @@ function RentalsAdmin() {
           ))}
         </div>
 
-        <span className="text-xs text-color-text-dim ml-auto">
+        <span className="text-xs text-text-dim ml-auto">
           {activeCount} activos / {completedCount} completados
         </span>
       </div>
 
       {/* Rentals list */}
       {filtered.length === 0 ? (
-        <div className="text-center py-12 text-color-text-muted text-sm">
+        <div className="text-center py-12 text-text-muted text-sm">
           No hay alquileres registrados
         </div>
       ) : (
@@ -204,7 +204,7 @@ function RentalsAdmin() {
 function RentalRow({ rental, stationName, returnStationName }) {
   const isActive = rental.status === 'active'
   const TypeIcon = rental.type === 'premium' ? Crown : Umbrella
-  const tierColor = rental.type === 'premium' ? 'text-color-sun' : 'text-color-accent'
+  const tierColor = rental.type === 'premium' ? 'text-sun' : 'text-accent'
 
   // Duration
   let duration = ''
@@ -215,17 +215,17 @@ function RentalRow({ rental, stationName, returnStationName }) {
   }
 
   return (
-    <div className="bg-color-bg-card rounded-2xl border border-color-border shadow-sm p-4">
+    <div className="bg-bg-card rounded-2xl border border-border shadow-sm p-4">
       <div className="flex items-start gap-3">
         <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
-          rental.type === 'premium' ? 'bg-color-sun-soft' : 'bg-color-accent-soft'
+          rental.type === 'premium' ? 'bg-sun-soft' : 'bg-accent-soft'
         }`}>
           <TypeIcon size={16} className={tierColor} />
         </div>
 
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
-            <p className="text-sm font-semibold text-color-text truncate">
+            <p className="text-sm font-semibold text-text truncate">
               {stationName || rental.stationId}
             </p>
             <Badge variant={isActive ? 'success' : 'default'}>
@@ -233,7 +233,7 @@ function RentalRow({ rental, stationName, returnStationName }) {
             </Badge>
           </div>
 
-          <div className="flex items-center gap-3 mt-1 text-xs text-color-text-muted">
+          <div className="flex items-center gap-3 mt-1 text-xs text-text-muted">
             <span className="flex items-center gap-1">
               <Clock size={10} />
               {timeAgo(rental.pickupTime)}
@@ -247,17 +247,17 @@ function RentalRow({ rental, stationName, returnStationName }) {
           </div>
 
           {rental.returnStationId && rental.returnStationId !== rental.stationId && (
-            <p className="text-[10px] text-color-text-dim mt-1">
+            <p className="text-[10px] text-text-dim mt-1">
               Devuelto en: {returnStationName || rental.returnStationId}
             </p>
           )}
         </div>
 
         <div className="text-right shrink-0">
-          <p className="text-[10px] text-color-text-dim">
+          <p className="text-[10px] text-text-dim">
             {formatDateTime(rental.pickupTime)}
           </p>
-          <p className="text-[10px] text-color-text-dim font-mono mt-0.5">
+          <p className="text-[10px] text-text-dim font-mono mt-0.5">
             {rental.id.slice(0, 12)}
           </p>
         </div>

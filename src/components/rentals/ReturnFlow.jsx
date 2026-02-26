@@ -44,53 +44,53 @@ export function ReturnFlow({ rental, onClose }) {
     return (
       <DialogShell title="Devolucion completada" onClose={onClose}>
         <div className="flex flex-col items-center py-4">
-          <div className="w-16 h-16 rounded-2xl bg-color-success-soft flex items-center justify-center mb-4">
-            <Check size={30} className="text-color-success" />
+          <div className="w-16 h-16 rounded-2xl bg-success-soft flex items-center justify-center mb-4">
+            <Check size={30} className="text-success" />
           </div>
-          <h3 className="font-display text-lg font-bold text-color-text mb-1">
+          <h3 className="font-display text-lg font-bold text-text mb-1">
             Devolucion exitosa
           </h3>
-          <p className="text-sm text-color-text-muted mb-6 text-center">
+          <p className="text-sm text-text-muted mb-6 text-center">
             Tu equipamiento fue devuelto correctamente
           </p>
 
           {/* Resumen */}
-          <div className="w-full rounded-2xl border border-color-border bg-color-bg-card p-4 space-y-2.5 mb-5"
+          <div className="w-full rounded-2xl border border-border bg-bg-card p-4 space-y-2.5 mb-5"
             style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
           >
             <div className="flex items-center gap-2 text-sm">
               <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                isPremium ? 'bg-color-sun-soft' : 'bg-color-accent-soft'
+                isPremium ? 'bg-sun-soft' : 'bg-accent-soft'
               }`}>
-                <Icon size={16} className={isPremium ? 'text-color-tier-premium' : 'text-color-tier-basic'} />
+                <Icon size={16} className={isPremium ? 'text-tier-premium' : 'text-tier-basic'} />
               </div>
-              <span className="font-medium text-color-text">{tier?.name}</span>
+              <span className="font-medium text-text">{tier?.name}</span>
             </div>
 
-            <div className="h-px bg-color-border" />
+            <div className="h-px bg-border" />
 
-            <div className="flex items-center gap-2 text-sm text-color-text-muted">
-              <MapPin size={13} className="text-color-accent shrink-0" />
+            <div className="flex items-center gap-2 text-sm text-text-muted">
+              <MapPin size={13} className="text-accent shrink-0" />
               <span>Retiro:</span>
-              <span className="text-color-text font-medium">{rental.stationName || rental.stationId}</span>
+              <span className="text-text font-medium">{rental.stationName || rental.stationId}</span>
             </div>
 
-            <div className="flex items-center justify-center text-color-text-dim">
+            <div className="flex items-center justify-center text-text-dim">
               <ArrowRight size={14} />
             </div>
 
-            <div className="flex items-center gap-2 text-sm text-color-text-muted">
-              <MapPin size={13} className="text-color-success shrink-0" />
+            <div className="flex items-center gap-2 text-sm text-text-muted">
+              <MapPin size={13} className="text-success shrink-0" />
               <span>Devolucion:</span>
-              <span className="text-color-text font-medium">
+              <span className="text-text font-medium">
                 {completed.returnStationName || completed.returnStationId || selectedStation}
               </span>
             </div>
 
             {completed.returnTime && (
               <>
-                <div className="h-px bg-color-border" />
-                <div className="text-xs text-color-text-muted text-center">
+                <div className="h-px bg-border" />
+                <div className="text-xs text-text-muted text-center">
                   {formatDateTime(completed.returnTime)}
                 </div>
               </>
@@ -99,7 +99,7 @@ export function ReturnFlow({ rental, onClose }) {
 
           <button
             onClick={onClose}
-            className="w-full py-3 rounded-xl bg-color-accent text-white font-semibold text-sm hover:bg-color-accent-hover transition-colors"
+            className="w-full py-3 rounded-xl bg-accent text-white font-semibold text-sm hover:bg-accent-hover transition-colors"
             style={{ boxShadow: '0 4px 12px rgba(8, 145, 178, 0.3)' }}
           >
             Cerrar
@@ -113,15 +113,15 @@ export function ReturnFlow({ rental, onClose }) {
     <DialogShell title="Devolver equipamiento" onClose={onClose}>
       <div className="space-y-5">
         {/* Info del alquiler actual */}
-        <div className="flex items-center gap-3 p-3 rounded-xl bg-color-bg-card-hover">
+        <div className="flex items-center gap-3 p-3 rounded-xl bg-bg-card-hover">
           <div className={`w-9 h-9 rounded-xl flex items-center justify-center ${
-            isPremium ? 'bg-color-sun-soft' : 'bg-color-accent-soft'
+            isPremium ? 'bg-sun-soft' : 'bg-accent-soft'
           }`}>
-            <Icon size={18} className={isPremium ? 'text-color-tier-premium' : 'text-color-tier-basic'} />
+            <Icon size={18} className={isPremium ? 'text-tier-premium' : 'text-tier-basic'} />
           </div>
           <div className="flex-1">
-            <span className="text-sm font-semibold text-color-text">{tier?.name}</span>
-            <div className="flex items-center gap-1.5 text-xs text-color-text-muted">
+            <span className="text-sm font-semibold text-text">{tier?.name}</span>
+            <div className="flex items-center gap-1.5 text-xs text-text-muted">
               <MapPin size={11} />
               <span>Retirado en {rental.stationName || rental.stationId}</span>
             </div>
@@ -130,7 +130,7 @@ export function ReturnFlow({ rental, onClose }) {
 
         {/* Seleccion de estacion de devolucion */}
         <div>
-          <label className="block text-sm font-semibold text-color-text mb-2">
+          <label className="block text-sm font-semibold text-text mb-2">
             Elegí la estacion de devolucion
           </label>
           <div className="space-y-2 max-h-48 overflow-auto pr-1">
@@ -140,27 +140,27 @@ export function ReturnFlow({ rental, onClose }) {
                 onClick={() => setSelectedStation(station.id)}
                 className={`w-full p-3 rounded-xl border-2 text-left transition-all flex items-center gap-3 ${
                   selectedStation === station.id
-                    ? 'border-color-accent bg-color-accent-soft/30'
-                    : 'border-color-border hover:border-color-border-hover bg-color-bg-card'
+                    ? 'border-accent bg-accent-soft/30'
+                    : 'border-border hover:border-border-hover bg-bg-card'
                 }`}
               >
                 <MapPin size={16} className={
-                  selectedStation === station.id ? 'text-color-accent' : 'text-color-text-dim'
+                  selectedStation === station.id ? 'text-accent' : 'text-text-dim'
                 } />
                 <div className="flex-1 min-w-0">
-                  <span className="text-sm font-medium text-color-text block truncate">
+                  <span className="text-sm font-medium text-text block truncate">
                     {station.name}
                   </span>
-                  <span className="text-[11px] text-color-text-muted">{station.zone}</span>
+                  <span className="text-[11px] text-text-muted">{station.zone}</span>
                 </div>
                 {selectedStation === station.id && (
-                  <Check size={16} className="text-color-accent shrink-0" />
+                  <Check size={16} className="text-accent shrink-0" />
                 )}
               </button>
             ))}
           </div>
           {activeStations.length === 0 && (
-            <p className="text-sm text-color-text-muted text-center py-4">
+            <p className="text-sm text-text-muted text-center py-4">
               Cargando estaciones...
             </p>
           )}
@@ -170,7 +170,7 @@ export function ReturnFlow({ rental, onClose }) {
         <button
           onClick={handleReturn}
           disabled={!selectedStation || loading}
-          className="w-full py-3.5 rounded-xl bg-color-accent text-white font-semibold text-sm hover:bg-color-accent-hover transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full py-3.5 rounded-xl bg-accent text-white font-semibold text-sm hover:bg-accent-hover transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
           style={{ boxShadow: '0 4px 12px rgba(8, 145, 178, 0.3)' }}
         >
           {loading ? (

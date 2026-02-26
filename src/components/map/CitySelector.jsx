@@ -19,8 +19,8 @@ export function CitySelector() {
           onClick={() => setCity(key)}
           className={`px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-200 ${
             selectedCity === key
-              ? 'bg-color-accent text-white shadow-sm'
-              : 'text-color-text-muted hover:text-color-text'
+              ? 'bg-accent text-white shadow-sm'
+              : 'text-text-muted hover:text-text'
           }`}
         >
           {city.name}

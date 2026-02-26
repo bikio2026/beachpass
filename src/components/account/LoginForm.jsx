@@ -34,22 +34,22 @@ export function LoginForm() {
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="w-16 h-16 rounded-2xl bg-color-accent mx-auto flex items-center justify-center mb-4"
+          <div className="w-16 h-16 rounded-2xl bg-accent mx-auto flex items-center justify-center mb-4"
             style={{ boxShadow: '0 8px 24px rgba(8,145,178,0.25)' }}>
             <Umbrella size={28} className="text-white" />
           </div>
-          <h1 className="font-display text-2xl font-bold text-color-text">BeachPass</h1>
-          <p className="text-sm text-color-text-muted mt-1">
+          <h1 className="font-display text-2xl font-bold text-text">BeachPass</h1>
+          <p className="text-sm text-text-muted mt-1">
             {mode === 'login' ? 'Ingresá a tu cuenta' : 'Creá tu cuenta'}
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-1 p-1 bg-color-bg-input rounded-xl mb-6">
+        <div className="flex gap-1 p-1 bg-bg-input rounded-xl mb-6">
           <button
             onClick={() => setMode('login')}
             className={`flex-1 py-2 text-sm font-semibold rounded-lg transition-all ${
-              mode === 'login' ? 'bg-color-bg-card text-color-text shadow-sm' : 'text-color-text-muted'
+              mode === 'login' ? 'bg-bg-card text-text shadow-sm' : 'text-text-muted'
             }`}
           >
             Ingresar
@@ -57,7 +57,7 @@ export function LoginForm() {
           <button
             onClick={() => setMode('register')}
             className={`flex-1 py-2 text-sm font-semibold rounded-lg transition-all ${
-              mode === 'register' ? 'bg-color-bg-card text-color-text shadow-sm' : 'text-color-text-muted'
+              mode === 'register' ? 'bg-bg-card text-text shadow-sm' : 'text-text-muted'
             }`}
           >
             Registrarse
@@ -68,42 +68,42 @@ export function LoginForm() {
           {mode === 'register' && (
             <>
               <div className="relative">
-                <User size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-color-text-dim" />
+                <User size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-dim" />
                 <input
                   type="text"
                   placeholder="Nombre completo"
                   value={form.name}
                   onChange={(e) => update('name', e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-color-bg-input border border-color-border rounded-xl text-sm focus:outline-none focus:border-color-accent transition-colors"
+                  className="w-full pl-10 pr-4 py-3 bg-bg-input border border-border rounded-xl text-sm focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
               <div className="relative">
-                <Phone size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-color-text-dim" />
+                <Phone size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-dim" />
                 <input
                   type="tel"
                   placeholder="Teléfono (opcional)"
                   value={form.phone}
                   onChange={(e) => update('phone', e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-color-bg-input border border-color-border rounded-xl text-sm focus:outline-none focus:border-color-accent transition-colors"
+                  className="w-full pl-10 pr-4 py-3 bg-bg-input border border-border rounded-xl text-sm focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
             </>
           )}
 
           <div className="relative">
-            <Mail size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-color-text-dim" />
+            <Mail size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-dim" />
             <input
               type="email"
               placeholder="Email"
               value={form.email}
               onChange={(e) => update('email', e.target.value)}
               required
-              className="w-full pl-10 pr-4 py-3 bg-color-bg-input border border-color-border rounded-xl text-sm focus:outline-none focus:border-color-accent transition-colors"
+              className="w-full pl-10 pr-4 py-3 bg-bg-input border border-border rounded-xl text-sm focus:outline-none focus:border-accent transition-colors"
             />
           </div>
 
           <div className="relative">
-            <Lock size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-color-text-dim" />
+            <Lock size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-dim" />
             <input
               type="password"
               placeholder="PIN (4 dígitos)"
@@ -112,18 +112,18 @@ export function LoginForm() {
               maxLength={4}
               pattern="[0-9]{4}"
               required
-              className="w-full pl-10 pr-4 py-3 bg-color-bg-input border border-color-border rounded-xl text-sm focus:outline-none focus:border-color-accent transition-colors"
+              className="w-full pl-10 pr-4 py-3 bg-bg-input border border-border rounded-xl text-sm focus:outline-none focus:border-accent transition-colors"
             />
           </div>
 
           {error && (
-            <p className="text-xs text-color-error bg-color-error-soft px-3 py-2 rounded-lg">{error}</p>
+            <p className="text-xs text-error bg-error-soft px-3 py-2 rounded-lg">{error}</p>
           )}
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 rounded-xl bg-color-accent text-white font-semibold text-sm hover:bg-color-accent-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
+            className="w-full py-3 rounded-xl bg-accent text-white font-semibold text-sm hover:bg-accent-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
             style={{ boxShadow: '0 4px 12px rgba(8,145,178,0.3)' }}
           >
             {loading ? (
@@ -138,9 +138,9 @@ export function LoginForm() {
         </form>
 
         {/* Demo hint */}
-        <div className="mt-6 p-3 rounded-xl bg-color-sun-soft text-center">
-          <p className="text-xs text-color-text-muted">
-            <span className="font-semibold text-color-sun">Demo:</span>{' '}
+        <div className="mt-6 p-3 rounded-xl bg-sun-soft text-center">
+          <p className="text-xs text-text-muted">
+            <span className="font-semibold text-sun">Demo:</span>{' '}
             demo@beachpass.com / PIN: 0000
           </p>
         </div>

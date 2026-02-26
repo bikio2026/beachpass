@@ -41,20 +41,20 @@ export function AccountPanel() {
       <Header />
       <div className="flex-1 overflow-auto p-6 pb-20 md:pb-6 max-w-lg mx-auto w-full">
         {/* User info */}
-        <div className="bg-color-bg-card rounded-2xl border border-color-border p-5 mb-4" style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
+        <div className="bg-bg-card rounded-2xl border border-border p-5 mb-4" style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
           <div className="flex items-center gap-4 mb-4">
-            <div className="w-14 h-14 rounded-2xl bg-color-accent flex items-center justify-center text-white font-display text-xl font-bold"
+            <div className="w-14 h-14 rounded-2xl bg-accent flex items-center justify-center text-white font-display text-xl font-bold"
               style={{ boxShadow: '0 4px 12px rgba(8,145,178,0.25)' }}>
               {user.name?.charAt(0)?.toUpperCase() || '?'}
             </div>
             <div className="flex-1">
-              <h2 className="font-display text-lg font-bold text-color-text">{user.name}</h2>
-              <p className="text-sm text-color-text-muted">{user.email}</p>
+              <h2 className="font-display text-lg font-bold text-text">{user.name}</h2>
+              <p className="text-sm text-text-muted">{user.email}</p>
             </div>
           </div>
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 text-sm text-color-text-muted hover:text-color-error transition-colors"
+            className="flex items-center gap-2 text-sm text-text-muted hover:text-error transition-colors"
           >
             <LogOut size={15} />
             Cerrar sesión
@@ -71,37 +71,37 @@ export function AccountPanel() {
             }`}
           >
             <div className="flex items-center gap-2 mb-3">
-              <TierIcon size={18} className={sub.tier === 'premium' ? 'text-color-tier-premium' : 'text-color-tier-basic'} />
-              <span className="font-display text-base font-bold text-color-text">
+              <TierIcon size={18} className={sub.tier === 'premium' ? 'text-tier-premium' : 'text-tier-basic'} />
+              <span className="font-display text-base font-bold text-text">
                 Plan {tier?.name}
               </span>
               <Badge variant={sub.tier === 'premium' ? 'sun' : 'accent'}>Activo</Badge>
             </div>
-            <p className="text-sm text-color-text-muted mb-3">{tier?.description}</p>
+            <p className="text-sm text-text-muted mb-3">{tier?.description}</p>
             <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-2 text-color-text-muted">
+              <div className="flex items-center gap-2 text-text-muted">
                 <Calendar size={14} />
                 <span>Desde {formatDate(sub.startDate)}</span>
               </div>
-              <div className="flex items-center gap-2 text-color-text-muted">
+              <div className="flex items-center gap-2 text-text-muted">
                 <Clock size={14} />
                 <span>Vence {formatDate(sub.endDate)}</span>
               </div>
-              <div className="flex items-center gap-2 text-color-text">
+              <div className="flex items-center gap-2 text-text">
                 <span className="font-semibold">{formatCurrency(sub.price)}</span>
-                <span className="text-color-text-dim">/ {sub.period === 'daily' ? 'día' : sub.period === 'weekly' ? 'semana' : sub.period === 'monthly' ? 'mes' : 'año'}</span>
+                <span className="text-text-dim">/ {sub.period === 'daily' ? 'día' : sub.period === 'weekly' ? 'semana' : sub.period === 'monthly' ? 'mes' : 'año'}</span>
               </div>
             </div>
           </div>
         ) : (
-          <div className="bg-color-bg-card rounded-2xl border border-color-border p-5 mb-4 text-center"
+          <div className="bg-bg-card rounded-2xl border border-border p-5 mb-4 text-center"
             style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
-            <Umbrella size={32} className="text-color-text-dim mx-auto mb-3" />
-            <h3 className="font-display text-base font-semibold text-color-text mb-1">Sin suscripción activa</h3>
-            <p className="text-sm text-color-text-muted mb-4">Elegí un plan para empezar a alquilar</p>
+            <Umbrella size={32} className="text-text-dim mx-auto mb-3" />
+            <h3 className="font-display text-base font-semibold text-text mb-1">Sin suscripción activa</h3>
+            <p className="text-sm text-text-muted mb-4">Elegí un plan para empezar a alquilar</p>
             <button
               onClick={() => setActiveView('subscription')}
-              className="px-5 py-2.5 rounded-xl bg-color-accent text-white text-sm font-semibold hover:bg-color-accent-hover transition-colors"
+              className="px-5 py-2.5 rounded-xl bg-accent text-white text-sm font-semibold hover:bg-accent-hover transition-colors"
               style={{ boxShadow: '0 4px 12px rgba(8,145,178,0.3)' }}
             >
               Ver planes

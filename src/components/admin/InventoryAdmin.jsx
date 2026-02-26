@@ -17,7 +17,7 @@ function StatusBadge({ status, count }) {
   return (
     <div className="flex items-center gap-1.5">
       <Badge variant={cfg.variant}>{count}</Badge>
-      <span className="text-[10px] text-color-text-dim hidden sm:inline">{cfg.label}</span>
+      <span className="text-[10px] text-text-dim hidden sm:inline">{cfg.label}</span>
     </div>
   )
 }
@@ -76,7 +76,7 @@ export function InventoryAdmin() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20">
-        <div className="w-8 h-8 border-3 border-color-accent border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-3 border-accent border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
@@ -113,10 +113,10 @@ export function InventoryAdmin() {
       </div>
 
       {/* Per-station table */}
-      <div className="bg-color-bg-card rounded-2xl border border-color-border shadow-sm overflow-hidden">
-        <div className="flex items-center gap-2 px-5 py-3 border-b border-color-border">
-          <Package size={16} className="text-color-accent" />
-          <h3 className="font-display text-sm font-semibold text-color-text">
+      <div className="bg-bg-card rounded-2xl border border-border shadow-sm overflow-hidden">
+        <div className="flex items-center gap-2 px-5 py-3 border-b border-border">
+          <Package size={16} className="text-accent" />
+          <h3 className="font-display text-sm font-semibold text-text">
             Inventario por estacion
           </h3>
         </div>
@@ -124,28 +124,28 @@ export function InventoryAdmin() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-color-border bg-color-bg-input">
-                <th className="text-left px-4 py-2.5 text-[10px] font-medium text-color-text-muted uppercase tracking-wide">
+              <tr className="border-b border-border bg-bg-input">
+                <th className="text-left px-4 py-2.5 text-[10px] font-medium text-text-muted uppercase tracking-wide">
                   Estacion
                 </th>
-                <th className="text-center px-2 py-2.5 text-[10px] font-medium text-color-text-muted uppercase tracking-wide" colSpan={4}>
+                <th className="text-center px-2 py-2.5 text-[10px] font-medium text-text-muted uppercase tracking-wide" colSpan={4}>
                   <span className="flex items-center justify-center gap-1">
                     <Umbrella size={10} /> Basic
                   </span>
                 </th>
-                <th className="text-center px-2 py-2.5 text-[10px] font-medium text-color-text-muted uppercase tracking-wide" colSpan={4}>
+                <th className="text-center px-2 py-2.5 text-[10px] font-medium text-text-muted uppercase tracking-wide" colSpan={4}>
                   <span className="flex items-center justify-center gap-1">
                     <Crown size={10} /> Premium
                   </span>
                 </th>
               </tr>
-              <tr className="border-b border-color-border bg-color-bg-input">
+              <tr className="border-b border-border bg-bg-input">
                 <th></th>
                 {['Disp', 'Alq', 'Res', 'Mant'].map(h => (
-                  <th key={`b-${h}`} className="px-1 py-1 text-[9px] text-color-text-dim text-center">{h}</th>
+                  <th key={`b-${h}`} className="px-1 py-1 text-[9px] text-text-dim text-center">{h}</th>
                 ))}
                 {['Disp', 'Alq', 'Res', 'Mant'].map(h => (
-                  <th key={`p-${h}`} className="px-1 py-1 text-[9px] text-color-text-dim text-center">{h}</th>
+                  <th key={`p-${h}`} className="px-1 py-1 text-[9px] text-text-dim text-center">{h}</th>
                 ))}
               </tr>
             </thead>
@@ -155,10 +155,10 @@ export function InventoryAdmin() {
                 const premium = station.availability?.premium || {}
 
                 return (
-                  <tr key={station.id} className="border-b border-color-border last:border-0 hover:bg-color-bg-card-hover transition-colors">
+                  <tr key={station.id} className="border-b border-border last:border-0 hover:bg-bg-card-hover transition-colors">
                     <td className="px-4 py-2.5">
-                      <p className="text-sm font-medium text-color-text truncate max-w-[160px]">{station.name}</p>
-                      <p className="text-[10px] text-color-text-dim">{station.zone}</p>
+                      <p className="text-sm font-medium text-text truncate max-w-[160px]">{station.name}</p>
+                      <p className="text-[10px] text-text-dim">{station.zone}</p>
                     </td>
                     <CellVal value={basic.available} color="success" />
                     <CellVal value={basic.rented} color="accent" />
@@ -181,12 +181,12 @@ export function InventoryAdmin() {
 
 function CellVal({ value, color }) {
   const v = value || 0
-  if (v === 0) return <td className="text-center text-xs text-color-text-dim px-1 py-2.5">-</td>
+  if (v === 0) return <td className="text-center text-xs text-text-dim px-1 py-2.5">-</td>
   const colorClasses = {
-    success: 'text-color-success',
-    accent: 'text-color-accent',
-    sun: 'text-color-sun',
-    warning: 'text-color-warning',
+    success: 'text-success',
+    accent: 'text-accent',
+    sun: 'text-sun',
+    warning: 'text-warning',
   }
   return (
     <td className={`text-center text-xs font-semibold px-1 py-2.5 ${colorClasses[color] || ''}`}>
@@ -198,11 +198,11 @@ function CellVal({ value, color }) {
 function SummaryCard({ icon: Icon, label, color, data }) {
   const total = data.total || 0
   return (
-    <div className="bg-color-bg-card rounded-2xl border border-color-border p-4 shadow-sm">
+    <div className="bg-bg-card rounded-2xl border border-border p-4 shadow-sm">
       <div className="flex items-center gap-2 mb-3">
         <Icon size={16} style={{ color }} />
-        <span className="text-sm font-semibold text-color-text">{label}</span>
-        <span className="text-xs text-color-text-dim ml-auto">{total} total</span>
+        <span className="text-sm font-semibold text-text">{label}</span>
+        <span className="text-xs text-text-dim ml-auto">{total} total</span>
       </div>
       <div className="flex flex-wrap gap-2">
         <StatusBadge status="available" count={data.available || 0} />

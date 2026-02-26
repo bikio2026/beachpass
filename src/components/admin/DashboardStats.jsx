@@ -6,22 +6,22 @@ const API = import.meta.env.VITE_API_URL || 'http://localhost:3083'
 
 function StatCard({ icon: Icon, label, value, sub, color = 'accent' }) {
   const colorMap = {
-    accent: { bg: 'bg-color-accent-soft', text: 'text-color-accent' },
-    sun: { bg: 'bg-color-sun-soft', text: 'text-color-sun' },
-    success: { bg: 'bg-color-success-soft', text: 'text-color-success' },
-    error: { bg: 'bg-color-error-soft', text: 'text-color-error' },
+    accent: { bg: 'bg-accent-soft', text: 'text-accent' },
+    sun: { bg: 'bg-sun-soft', text: 'text-sun' },
+    success: { bg: 'bg-success-soft', text: 'text-success' },
+    error: { bg: 'bg-error-soft', text: 'text-error' },
   }
   const c = colorMap[color] || colorMap.accent
 
   return (
-    <div className="bg-color-bg-card rounded-2xl border border-color-border p-5 flex items-start gap-4 shadow-sm">
+    <div className="bg-bg-card rounded-2xl border border-border p-5 flex items-start gap-4 shadow-sm">
       <div className={`w-11 h-11 rounded-xl ${c.bg} flex items-center justify-center shrink-0`}>
         <Icon size={20} className={c.text} />
       </div>
       <div className="min-w-0">
-        <p className="text-xs text-color-text-muted font-medium">{label}</p>
-        <p className="font-display text-2xl font-bold text-color-text leading-tight mt-0.5">{value}</p>
-        {sub && <p className="text-xs text-color-text-dim mt-0.5">{sub}</p>}
+        <p className="text-xs text-text-muted font-medium">{label}</p>
+        <p className="font-display text-2xl font-bold text-text leading-tight mt-0.5">{value}</p>
+        {sub && <p className="text-xs text-text-dim mt-0.5">{sub}</p>}
       </div>
     </div>
   )
@@ -36,12 +36,12 @@ function HorizontalBarChart({ data, maxValue, label = 'alquileres' }) {
       {data.map((item, i) => (
         <div key={i}>
           <div className="flex items-center justify-between mb-1">
-            <span className="text-sm font-medium text-color-text truncate pr-2">{item.name}</span>
-            <span className="text-xs text-color-text-muted whitespace-nowrap">
+            <span className="text-sm font-medium text-text truncate pr-2">{item.name}</span>
+            <span className="text-xs text-text-muted whitespace-nowrap">
               {item.value} {label}
             </span>
           </div>
-          <div className="w-full h-3 bg-color-bg-input rounded-full overflow-hidden">
+          <div className="w-full h-3 bg-bg-input rounded-full overflow-hidden">
             <div
               className="h-full rounded-full transition-all duration-500"
               style={{
@@ -71,12 +71,12 @@ function RevenueByTier({ revenue }) {
         return (
           <div
             key={t.key}
-            className="rounded-xl border border-color-border p-4 text-center"
+            className="rounded-xl border border-border p-4 text-center"
             style={{ borderLeftWidth: 3, borderLeftColor: t.color }}
           >
             <Icon size={18} className="mx-auto mb-1" style={{ color: t.color }} />
-            <p className="text-xs text-color-text-muted">{t.label}</p>
-            <p className="font-display text-lg font-bold text-color-text">{formatCurrency(t.amount)}</p>
+            <p className="text-xs text-text-muted">{t.label}</p>
+            <p className="font-display text-lg font-bold text-text">{formatCurrency(t.amount)}</p>
           </div>
         )
       })}
@@ -110,14 +110,14 @@ export function DashboardStats() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20">
-        <div className="w-8 h-8 border-3 border-color-accent border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-3 border-accent border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
 
   if (!overview) {
     return (
-      <div className="text-center py-12 text-color-text-muted">
+      <div className="text-center py-12 text-text-muted">
         No se pudieron cargar las estadisticas
       </div>
     )
@@ -164,25 +164,25 @@ export function DashboardStats() {
       </div>
 
       {/* Top stations */}
-      <div className="bg-color-bg-card rounded-2xl border border-color-border p-5 shadow-sm">
+      <div className="bg-bg-card rounded-2xl border border-border p-5 shadow-sm">
         <div className="flex items-center gap-2 mb-4">
-          <TrendingUp size={18} className="text-color-accent" />
-          <h3 className="font-display text-sm font-semibold text-color-text">
+          <TrendingUp size={18} className="text-accent" />
+          <h3 className="font-display text-sm font-semibold text-text">
             Estaciones mas populares
           </h3>
         </div>
         {topStationsData.length > 0 ? (
           <HorizontalBarChart data={topStationsData} />
         ) : (
-          <p className="text-sm text-color-text-muted text-center py-4">Sin datos de alquileres aun</p>
+          <p className="text-sm text-text-muted text-center py-4">Sin datos de alquileres aun</p>
         )}
       </div>
 
       {/* Revenue by tier */}
-      <div className="bg-color-bg-card rounded-2xl border border-color-border p-5 shadow-sm">
+      <div className="bg-bg-card rounded-2xl border border-border p-5 shadow-sm">
         <div className="flex items-center gap-2 mb-4">
-          <DollarSign size={18} className="text-color-sun" />
-          <h3 className="font-display text-sm font-semibold text-color-text">
+          <DollarSign size={18} className="text-sun" />
+          <h3 className="font-display text-sm font-semibold text-text">
             Ingresos por tier
           </h3>
         </div>
@@ -190,10 +190,10 @@ export function DashboardStats() {
       </div>
 
       {/* Equipment summary */}
-      <div className="bg-color-bg-card rounded-2xl border border-color-border p-5 shadow-sm">
+      <div className="bg-bg-card rounded-2xl border border-border p-5 shadow-sm">
         <div className="flex items-center gap-2 mb-4">
-          <Umbrella size={18} className="text-color-accent" />
-          <h3 className="font-display text-sm font-semibold text-color-text">
+          <Umbrella size={18} className="text-accent" />
+          <h3 className="font-display text-sm font-semibold text-text">
             Estado del equipamiento
           </h3>
         </div>
@@ -204,7 +204,7 @@ export function DashboardStats() {
 }
 
 function EquipmentSummaryBar({ data, total }) {
-  if (!data || total === 0) return <p className="text-sm text-color-text-muted">Sin datos</p>
+  if (!data || total === 0) return <p className="text-sm text-text-muted">Sin datos</p>
 
   const segments = [
     { key: 'available', label: 'Disponible', color: 'var(--color-success)', count: data.available || 0 },
@@ -216,7 +216,7 @@ function EquipmentSummaryBar({ data, total }) {
   return (
     <div>
       {/* Stacked bar */}
-      <div className="w-full h-5 rounded-full overflow-hidden flex bg-color-bg-input">
+      <div className="w-full h-5 rounded-full overflow-hidden flex bg-bg-input">
         {segments.map(seg => {
           const pct = (seg.count / total) * 100
           if (pct === 0) return null
@@ -235,7 +235,7 @@ function EquipmentSummaryBar({ data, total }) {
         {segments.map(seg => (
           <div key={seg.key} className="flex items-center gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full" style={{ background: seg.color }} />
-            <span className="text-xs text-color-text-muted">{seg.label}: {seg.count}</span>
+            <span className="text-xs text-text-muted">{seg.label}: {seg.count}</span>
           </div>
         ))}
       </div>

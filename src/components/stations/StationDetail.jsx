@@ -46,12 +46,11 @@ export function StationDetail() {
         <div
           className="h-[55vh] md:h-full m-3 rounded-2xl p-6 flex items-center justify-center"
           style={{
-            background: 'rgba(255,255,255,0.95)',
-            backdropFilter: 'blur(16px)',
-            boxShadow: '0 8px 40px rgba(0,0,0,0.1)',
+            background: '#ffffff',
+            boxShadow: '0 8px 40px rgba(0,0,0,0.12)',
           }}
         >
-          <div className="w-8 h-8 border-2 border-color-accent border-t-transparent rounded-full animate-spin" />
+          <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
         </div>
       </div>
     )
@@ -62,29 +61,28 @@ export function StationDetail() {
       <div
         className="max-h-[75vh] md:max-h-none md:h-full m-3 rounded-2xl flex flex-col overflow-hidden"
         style={{
-          background: 'rgba(255,255,255,0.95)',
-          backdropFilter: 'blur(16px)',
-          boxShadow: '0 8px 40px rgba(0,0,0,0.1)',
+          background: '#ffffff',
+          boxShadow: '0 8px 40px rgba(0,0,0,0.12)',
         }}
       >
         {/* Header */}
-        <div className="px-5 pt-5 pb-4 border-b border-color-border">
+        <div className="px-5 pt-5 pb-4 border-b border-border">
           <div className="flex items-start justify-between mb-3">
             <div className="flex items-center gap-2">
               <StatusBadge status={station.status} />
             </div>
             <button
               onClick={clearStation}
-              className="p-1.5 rounded-lg text-color-text-muted hover:text-color-text hover:bg-color-bg-card-hover transition-colors"
+              className="p-1.5 rounded-lg text-text-muted hover:text-text hover:bg-bg-card-hover transition-colors"
             >
               <X size={18} />
             </button>
           </div>
 
-          <h2 className="font-display text-lg font-bold text-color-text leading-tight mb-1">
+          <h2 className="font-display text-lg font-bold text-text leading-tight mb-1">
             {station.name}
           </h2>
-          <div className="flex items-center gap-1.5 text-color-text-muted">
+          <div className="flex items-center gap-1.5 text-text-muted">
             <MapPin size={13} />
             <span className="text-xs">{station.zone} — {station.address}</span>
           </div>
@@ -94,15 +92,15 @@ export function StationDetail() {
         <div className="flex-1 overflow-auto px-5 py-4 space-y-5">
           {/* Availability */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-color-text-dim mb-3">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-text-dim mb-3">
               Disponibilidad
             </h3>
             <div className="space-y-3">
-              <div className="p-3 rounded-xl bg-color-accent-soft/50">
+              <div className="p-3 rounded-xl bg-accent-soft/50">
                 <div className="flex items-center gap-2 mb-2">
-                  <Umbrella size={15} className="text-color-tier-basic" />
-                  <span className="text-xs font-semibold text-color-text">Basic</span>
-                  <span className="text-[10px] text-color-text-dim ml-auto">Sombrilla compacta</span>
+                  <Umbrella size={15} className="text-tier-basic" />
+                  <span className="text-xs font-semibold text-text">Basic</span>
+                  <span className="text-[10px] text-text-dim ml-auto">Sombrilla compacta</span>
                 </div>
                 <AvailabilityBar
                   available={station.available?.basic || 0}
@@ -110,11 +108,11 @@ export function StationDetail() {
                 />
               </div>
 
-              <div className="p-3 rounded-xl bg-color-sun-soft/50">
+              <div className="p-3 rounded-xl bg-sun-soft/50">
                 <div className="flex items-center gap-2 mb-2">
-                  <Crown size={15} className="text-color-tier-premium" />
-                  <span className="text-xs font-semibold text-color-text">Premium</span>
-                  <span className="text-[10px] text-color-text-dim ml-auto">Sombrilla UV + hamacas</span>
+                  <Crown size={15} className="text-tier-premium" />
+                  <span className="text-xs font-semibold text-text">Premium</span>
+                  <span className="text-[10px] text-text-dim ml-auto">Sombrilla UV + hamacas</span>
                 </div>
                 <AvailabilityBar
                   available={station.available?.premium || 0}
@@ -126,11 +124,11 @@ export function StationDetail() {
 
           {/* Hours */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-color-text-dim mb-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-text-dim mb-2">
               Horario
             </h3>
-            <div className="flex items-center gap-2 text-sm text-color-text">
-              <Clock size={15} className="text-color-accent" />
+            <div className="flex items-center gap-2 text-sm text-text">
+              <Clock size={15} className="text-accent" />
               <span>{station.openHours}</span>
             </div>
           </div>
@@ -138,7 +136,7 @@ export function StationDetail() {
           {/* Amenities */}
           {station.amenities?.length > 0 && (
             <div>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-color-text-dim mb-2">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-text-dim mb-2">
                 Servicios
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -147,7 +145,7 @@ export function StationDetail() {
                   return (
                     <div
                       key={a}
-                      className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-color-bg-card-hover text-xs text-color-text-muted"
+                      className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-bg-card-hover text-xs text-text-muted"
                     >
                       <Icon size={13} />
                       <span>{AMENITY_LABELS[a] || a}</span>
@@ -160,10 +158,10 @@ export function StationDetail() {
         </div>
 
         {/* Actions */}
-        <div className="px-5 py-4 border-t border-color-border space-y-2">
+        <div className="px-5 py-4 border-t border-border space-y-2">
           <button
             onClick={() => setShowRental(true)}
-            className="w-full py-3 rounded-xl bg-color-accent text-white font-semibold text-sm hover:bg-color-accent-hover transition-colors flex items-center justify-center gap-2"
+            className="w-full py-3 rounded-xl bg-accent text-white font-semibold text-sm hover:bg-accent-hover transition-colors flex items-center justify-center gap-2"
             style={{ boxShadow: '0 4px 12px rgba(8, 145, 178, 0.3)' }}
           >
             Alquilar aquí
@@ -171,7 +169,7 @@ export function StationDetail() {
           </button>
           <button
             onClick={() => setShowReservation(true)}
-            className="w-full py-2.5 rounded-xl bg-color-bg-card-hover text-color-text-muted font-medium text-sm hover:text-color-text transition-colors"
+            className="w-full py-2.5 rounded-xl bg-bg-card-hover text-text-muted font-medium text-sm hover:text-text transition-colors"
           >
             Reservar (30 min)
           </button>

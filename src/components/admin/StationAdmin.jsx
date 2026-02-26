@@ -86,7 +86,7 @@ export function StationAdmin() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20">
-        <div className="w-8 h-8 border-3 border-color-accent border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-3 border-accent border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
@@ -102,7 +102,7 @@ export function StationAdmin() {
         <Badge variant="success">{activeCount} activas</Badge>
         <Badge variant="warning">{maintCount} mantenimiento</Badge>
         {closedCount > 0 && <Badge variant="error">{closedCount} cerradas</Badge>}
-        <span className="text-xs text-color-text-dim ml-auto">{stations.length} estaciones</span>
+        <span className="text-xs text-text-dim ml-auto">{stations.length} estaciones</span>
       </div>
 
       {/* Station list */}
@@ -116,50 +116,50 @@ export function StationAdmin() {
           return (
             <div
               key={station.id}
-              className={`bg-color-bg-card rounded-2xl border transition-all ${
-                isEditing ? 'border-color-accent shadow-md' : 'border-color-border shadow-sm'
+              className={`bg-bg-card rounded-2xl border transition-all ${
+                isEditing ? 'border-accent shadow-md' : 'border-border shadow-sm'
               }`}
             >
               {/* Main row */}
               <div className="flex items-center gap-3 p-4">
-                <div className="w-9 h-9 rounded-xl bg-color-accent-soft flex items-center justify-center shrink-0">
-                  <MapPin size={16} className="text-color-accent" />
+                <div className="w-9 h-9 rounded-xl bg-accent-soft flex items-center justify-center shrink-0">
+                  <MapPin size={16} className="text-accent" />
                 </div>
 
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-color-text truncate">{station.name}</p>
-                  <p className="text-xs text-color-text-muted">{station.zone}</p>
+                  <p className="text-sm font-semibold text-text truncate">{station.name}</p>
+                  <p className="text-xs text-text-muted">{station.zone}</p>
                 </div>
 
                 <div className="flex items-center gap-2">
                   <Badge variant={statusInfo.color}>{statusInfo.label}</Badge>
 
                   <div className="text-right">
-                    <p className="text-xs font-semibold text-color-text">{totalAvail}/{totalCap}</p>
-                    <p className="text-[10px] text-color-text-dim">disponibles</p>
+                    <p className="text-xs font-semibold text-text">{totalAvail}/{totalCap}</p>
+                    <p className="text-[10px] text-text-dim">disponibles</p>
                   </div>
 
                   {!isEditing ? (
                     <button
                       onClick={() => startEdit(station)}
-                      className="p-2 rounded-lg hover:bg-color-bg-card-hover transition-colors"
+                      className="p-2 rounded-lg hover:bg-bg-card-hover transition-colors"
                       title="Editar"
                     >
-                      <Edit2 size={14} className="text-color-text-muted" />
+                      <Edit2 size={14} className="text-text-muted" />
                     </button>
                   ) : (
                     <div className="flex gap-1">
                       <button
                         onClick={() => saveEdit(station.id)}
                         disabled={saving}
-                        className="p-2 rounded-lg bg-color-accent text-white hover:bg-color-accent-hover transition-colors disabled:opacity-50"
+                        className="p-2 rounded-lg bg-accent text-white hover:bg-accent-hover transition-colors disabled:opacity-50"
                         title="Guardar"
                       >
                         <Save size={14} />
                       </button>
                       <button
                         onClick={cancelEdit}
-                        className="p-2 rounded-lg hover:bg-color-bg-card-hover transition-colors text-color-text-muted"
+                        className="p-2 rounded-lg hover:bg-bg-card-hover transition-colors text-text-muted"
                         title="Cancelar"
                       >
                         <AlertCircle size={14} />
@@ -171,30 +171,30 @@ export function StationAdmin() {
 
               {/* Edit form */}
               {isEditing && (
-                <div className="px-4 pb-4 pt-0 border-t border-color-border">
+                <div className="px-4 pb-4 pt-0 border-t border-border">
                   <div className="grid grid-cols-3 gap-3 mt-3">
                     {/* Status dropdown */}
                     <div>
-                      <label className="text-[10px] font-medium text-color-text-muted uppercase tracking-wide">
+                      <label className="text-[10px] font-medium text-text-muted uppercase tracking-wide">
                         Estado
                       </label>
                       <div className="relative mt-1">
                         <select
                           value={editData.status}
                           onChange={(e) => setEditData(d => ({ ...d, status: e.target.value }))}
-                          className="w-full appearance-none bg-color-bg-input text-sm text-color-text rounded-lg px-3 py-2 pr-8 border border-color-border focus:outline-none focus:border-color-accent"
+                          className="w-full appearance-none bg-bg-input text-sm text-text rounded-lg px-3 py-2 pr-8 border border-border focus:outline-none focus:border-accent"
                         >
                           {STATUS_OPTIONS.map(opt => (
                             <option key={opt.value} value={opt.value}>{opt.label}</option>
                           ))}
                         </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-color-text-muted pointer-events-none" />
+                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-text-muted pointer-events-none" />
                       </div>
                     </div>
 
                     {/* Basic capacity */}
                     <div>
-                      <label className="text-[10px] font-medium text-color-text-muted uppercase tracking-wide">
+                      <label className="text-[10px] font-medium text-text-muted uppercase tracking-wide">
                         Cap. Basic
                       </label>
                       <input
@@ -203,13 +203,13 @@ export function StationAdmin() {
                         max="50"
                         value={editData.capacityBasic}
                         onChange={(e) => setEditData(d => ({ ...d, capacityBasic: e.target.value }))}
-                        className="w-full bg-color-bg-input text-sm text-color-text rounded-lg px-3 py-2 border border-color-border focus:outline-none focus:border-color-accent mt-1"
+                        className="w-full bg-bg-input text-sm text-text rounded-lg px-3 py-2 border border-border focus:outline-none focus:border-accent mt-1"
                       />
                     </div>
 
                     {/* Premium capacity */}
                     <div>
-                      <label className="text-[10px] font-medium text-color-text-muted uppercase tracking-wide">
+                      <label className="text-[10px] font-medium text-text-muted uppercase tracking-wide">
                         Cap. Premium
                       </label>
                       <input
@@ -218,7 +218,7 @@ export function StationAdmin() {
                         max="30"
                         value={editData.capacityPremium}
                         onChange={(e) => setEditData(d => ({ ...d, capacityPremium: e.target.value }))}
-                        className="w-full bg-color-bg-input text-sm text-color-text rounded-lg px-3 py-2 border border-color-border focus:outline-none focus:border-color-accent mt-1"
+                        className="w-full bg-bg-input text-sm text-text rounded-lg px-3 py-2 border border-border focus:outline-none focus:border-accent mt-1"
                       />
                     </div>
                   </div>

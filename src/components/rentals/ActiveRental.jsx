@@ -56,21 +56,21 @@ export function ActiveRental() {
           return (
             <div
               key={rental.id}
-              className="bg-color-bg-card rounded-2xl border border-color-border p-4"
+              className="bg-bg-card rounded-2xl border border-border p-4"
               style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}
             >
               {/* Header */}
               <div className="flex items-center gap-3 mb-3">
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-                  isPremium ? 'bg-color-sun-soft' : 'bg-color-accent-soft'
+                  isPremium ? 'bg-sun-soft' : 'bg-accent-soft'
                 }`}>
-                  <Icon size={20} className={isPremium ? 'text-color-tier-premium' : 'text-color-tier-basic'} />
+                  <Icon size={20} className={isPremium ? 'text-tier-premium' : 'text-tier-basic'} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h4 className="font-display text-sm font-bold text-color-text">
+                  <h4 className="font-display text-sm font-bold text-text">
                     {tier?.name || rental.type} en uso
                   </h4>
-                  <div className="flex items-center gap-1.5 text-xs text-color-text-muted">
+                  <div className="flex items-center gap-1.5 text-xs text-text-muted">
                     <MapPin size={11} />
                     <span>{rental.stationName || rental.stationId}</span>
                   </div>
@@ -78,7 +78,7 @@ export function ActiveRental() {
                 {/* Boton QR */}
                 <button
                   onClick={() => setShowQR(rental)}
-                  className="p-2 rounded-xl bg-color-accent-soft text-color-accent hover:bg-color-accent hover:text-white transition-colors"
+                  className="p-2 rounded-xl bg-accent-soft text-accent hover:bg-accent hover:text-white transition-colors"
                   title="Ver QR"
                 >
                   <QrCode size={18} />
@@ -87,11 +87,11 @@ export function ActiveRental() {
 
               {/* Tiempo */}
               <div className="flex items-center gap-4 mb-4 px-1">
-                <div className="flex items-center gap-1.5 text-xs text-color-text-muted">
-                  <Clock size={12} className="text-color-accent" />
+                <div className="flex items-center gap-1.5 text-xs text-text-muted">
+                  <Clock size={12} className="text-accent" />
                   <span>Retiro: {formatTime(rental.pickupTime)}</span>
                 </div>
-                <div className="flex items-center gap-1.5 text-xs font-medium text-color-accent">
+                <div className="flex items-center gap-1.5 text-xs font-medium text-accent">
                   <Clock size={12} />
                   <ElapsedTime since={rental.pickupTime} />
                 </div>
@@ -100,7 +100,7 @@ export function ActiveRental() {
               {/* Boton Devolver */}
               <button
                 onClick={() => setShowReturn(rental)}
-                className="w-full py-3 rounded-xl bg-color-accent text-white font-semibold text-sm hover:bg-color-accent-hover transition-colors flex items-center justify-center gap-2"
+                className="w-full py-3 rounded-xl bg-accent text-white font-semibold text-sm hover:bg-accent-hover transition-colors flex items-center justify-center gap-2"
                 style={{ boxShadow: '0 4px 12px rgba(8, 145, 178, 0.3)' }}
               >
                 Devolver

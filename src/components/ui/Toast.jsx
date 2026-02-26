@@ -17,10 +17,10 @@ const STYLES = {
 }
 
 const ICON_COLORS = {
-  success: 'text-color-success',
-  warning: 'text-color-warning',
-  error: 'text-color-error',
-  info: 'text-color-accent',
+  success: 'text-success',
+  warning: 'text-warning',
+  error: 'text-error',
+  info: 'text-accent',
 }
 
 export function Toast({ toast }) {
@@ -37,16 +37,16 @@ export function Toast({ toast }) {
 
   return (
     <div
-      className={`flex items-start gap-3 px-4 py-3 bg-color-bg-card rounded-xl border-l-4 ${STYLES[toast.variant] || STYLES.info} shadow-lg ${
+      className={`flex items-start gap-3 px-4 py-3 bg-bg-card rounded-xl border-l-4 ${STYLES[toast.variant] || STYLES.info} shadow-lg ${
         exiting ? 'animate-toast-out' : 'animate-toast-in'
       }`}
       style={{ minWidth: 280, maxWidth: 380, boxShadow: '0 8px 32px rgba(0,0,0,0.1)' }}
     >
       <Icon size={18} className={`mt-0.5 shrink-0 ${ICON_COLORS[toast.variant] || ICON_COLORS.info}`} />
-      <p className="text-sm text-color-text flex-1">{toast.message}</p>
+      <p className="text-sm text-text flex-1">{toast.message}</p>
       <button
         onClick={() => removeToast(toast.id)}
-        className="p-0.5 shrink-0 text-color-text-dim hover:text-color-text transition-colors"
+        className="p-0.5 shrink-0 text-text-dim hover:text-text transition-colors"
       >
         <X size={14} />
       </button>
